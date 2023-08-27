@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JoinController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\TeamController;
@@ -28,3 +29,4 @@ Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
 Route::get('team', [TeamController::class, 'create']);
+Route::get('join', [JoinController::class, 'create']);
