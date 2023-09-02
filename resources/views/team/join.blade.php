@@ -21,7 +21,7 @@
                     <h1>Invitation Link</h1>
                 </div>
                 <div class="flex justify-center font-fantasy text-lg">
-                    <h2>For joining your team you need to have a invitation link from your Coach or Admin</h2>
+                    <h2>For joining your team you need to have an invitation link from your Coach or Admin</h2>
                 </div>
 
                 <form method="POST" action="join" class="mt-10">
