@@ -11,6 +11,12 @@
     }
 </style>
 
+<style>
+    .font-fantasy {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+
 <body style="font-family: Open Sans, sans-serif">
     <section class="px-6 py-8">
         <nav class="md:flex md:justify-between md:items-center">
@@ -31,7 +37,7 @@
                 @if (auth()->check())
                 <x-dropdown>
                     <x-slot name="trigger">
-                        <button class="font-bold uppercase mr-10">Welcome, {{ auth()->user()->name }}!</button>
+                        <button class="font-bold uppercase mr-10 font-fantasy">Welcome, {{ auth()->user()->name }}!</button>
                     </x-slot>
 
                     <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log Out</x-dropdown-item>
@@ -43,10 +49,10 @@
 
                 @else
                 <div class="mr-10 px-3 py-2 bg-blue-900 rounded-xl">
-                    <a href="register" class="text-white uppercase font-bold">Register</a>
+                    <a href="register" class="text-white uppercase font-bold font-fantasy">Register</a>
                 </div>
                 <div class="mr-10 px-3 py-2 bg-blue-900 rounded-xl">
-                    <a href="login" class="text-white uppercase font-bold">Log In</a>
+                    <a href="login" class="text-white uppercase font-bold font-fantasy">Log In</a>
                 </div>
                 @endif
             </div>
