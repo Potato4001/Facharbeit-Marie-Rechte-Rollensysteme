@@ -45,7 +45,7 @@
                     <x-form.input name="sport type" />
 
                     <x-form.field>
-                        <x-form.label name="team type" />
+                        <x-form.label name="team type"/>
 
                         <select name="team type" id="team type">
                             @php
@@ -70,7 +70,7 @@
 
                         <div>
                             <!-- Eingeben eines Namens wie man in dem Team heißen will-->
-                            <x-form.button>Continue</x-form.button>
+                            <x-form.button href="./team/step-user">Continue</x-form.button>
                         </div>
                     </div>
                 </form>

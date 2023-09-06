@@ -17,13 +17,13 @@ class TeamController extends Controller
     {
         // validate request
         $attributes = request()->validate([
-            'team name' => ['required', Rule::unique('team', 'team name')],
+            'team name' => ['required', Rule::unique('teams', 'name')],
             'sport type' => ['required'],
             'team type' => ['required']
         ]);
 
         Team::create($attributes);
 
-        return redirect('team/step-user');
+        return redirect()->route('team/step-user');
     }
 }
