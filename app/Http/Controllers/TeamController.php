@@ -24,6 +24,6 @@ class TeamController extends Controller
 
         Team::create($attributes);
 
-        return redirect()->route('team/step-user');
+        return redirect()->route('./team/step-user');
     }
 }

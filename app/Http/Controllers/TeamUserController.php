@@ -16,8 +16,8 @@ class TeamUserController extends Controller
     public function store()
     {
         $attributes = request()->validate([
-            'name' => ['required', Rule::unique('user', 'name')],
-            'email' => ['required', Rule::unique('user', 'email')]
+            'name' => ['required', Rule::unique('users', 'name')],
+            'email' => ['required', Rule::unique('users', 'email')]
         ]);
 
         User::create($attributes);

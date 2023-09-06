@@ -61,7 +61,7 @@
                     </x-form.field>
 
 
-                    <div class="inline-flex items-center justify-between">
+                    <div class="inline-flex justify-between">
                         <!-- Cardfooter left -->
                         <div class="py-2 px-10 mt-6 bg-gray-100 rounded-full font-semibold text-xs uppercase font-fantasy text-gray-500 hover:bg-gray-200">
                             <a class="" href="./">Back</a>
@@ -70,7 +70,7 @@
 
                         <div>
                             <!-- Eingeben eines Namens wie man in dem Team heißen will-->
-                            <x-form.button href="./team/step-user">Continue</x-form.button>
+                            <x-form.button>Continue</x-form.button>
                         </div>
                     </div>
                 </form>
