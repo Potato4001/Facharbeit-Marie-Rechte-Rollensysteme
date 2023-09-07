@@ -22,6 +22,6 @@ class TeamUserController extends Controller
 
         User::create($attributes);
 
-        return redirect('team/{user->team_id}');
+        return redirect('./team/{$user->team_id}');
     }
 }
