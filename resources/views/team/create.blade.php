@@ -40,9 +40,9 @@
                 <form method="POST" action="team" class="mt-10">
                     @csrf
 
-                    <x-form.input name="team name" />
+                    <x-form.input name="team name"/>
 
-                    <x-form.input name="sport type" />
+                    <x-form.input name="sport type"/>
 
                     <x-form.field>
                         <x-form.label name="team type"/>

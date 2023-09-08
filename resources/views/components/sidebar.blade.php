@@ -49,9 +49,9 @@
                         Create Team
                     </a>
                 </li>
-                @if (!auth()->check())
+                
                 <li class="mt-3 ml-1 border-b pb-2 inline-flex items-center w-40">
-                    <a href="./register" class="inline-flex items-center text-lg font-fantasy">
+                    <a href="./join" class="inline-flex items-center text-lg font-fantasy {{ request()->is('join')|request()->is('join/register') ? 'text-blue-400' : '' }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 mr-2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
@@ -67,7 +67,7 @@
                         Log In
                     </a>
                 </li>
-                @endif
+                
             </ul>
 
         </div>
