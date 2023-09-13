@@ -13,15 +13,18 @@ class TeamUserController extends Controller
         return view('team.user');
     }
 
-    public function store()
+    public function store(User $user)
     {
         $attributes = request()->validate([
             'name' => ['required', Rule::unique('users', 'name')],
-            'email' => ['required', Rule::unique('users', 'email')]
+            'email' => ['required', Rule::unique('users', 'email')],
+            'password' => ['required'],
         ]);
 
-        User::create($attributes);
+        $user = User::create($attributes);
 
-        return redirect('./{$user->team_id}');
+        auth()->login($user);
+
+        return redirect('team/{$user->team_id}');
     }
 }

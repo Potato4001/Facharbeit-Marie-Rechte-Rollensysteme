@@ -16,14 +16,16 @@ class TeamController extends Controller
     public function store()
     {
         // validate request
+        
         $attributes = request()->validate([
-            'team name' => ['required', Rule::unique('teams', 'name')],
-            'sport type' => ['required'],
-            'team type' => ['required']
+            'team_name' => ['required', Rule::unique('teams', 'team_name')],
+            'sport_type' => ['required'],
+            'team_type' => ['required']
         ]);
+        
 
         Team::create($attributes);
 
-        return redirect()->route('./team/step-user');
+        return redirect('team/step-user');
     }
 }

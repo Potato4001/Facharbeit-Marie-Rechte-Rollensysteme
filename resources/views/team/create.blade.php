@@ -40,14 +40,14 @@
                 <form method="POST" action="team" class="mt-10">
                     @csrf
 
-                    <x-form.input name="team name"/>
+                    <x-form.input name="team_name"/>
 
-                    <x-form.input name="sport type"/>
+                    <x-form.input name="sport_type"/>
 
                     <x-form.field>
-                        <x-form.label name="team type"/>
+                        <x-form.label name="team_type"/>
 
-                        <select name="team type" id="team type">
+                        <select name="team_type" id="team_type">
                             @php
                             $teamTypes = \App\Models\TeamType::all();
                             @endphp
@@ -57,7 +57,7 @@
                             @endforeach
                         </select>
 
-                        <x-form.error name="team type" />
+                        <x-form.error name="team_type" />
                     </x-form.field>
 
 
